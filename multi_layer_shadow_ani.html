@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 150px;
+        height: 200px;
+        background: black;
+        border-radius: 4px;
+        transition: box-shadow 0.5s, transform 0.25s;
+      }
+      .card:hov {
+        box-shadow: 5px 3px rgba(255, 255, 255, 0.05),
+          10px 6px rgba(255, 255, 255, 0.04) 15px 9px rgba(255, 255, 255, 0.03);
+        transform: rotate(20deg) skew(-10deg -5deg);
+        transition: box-shadow 0.75s, transform 0.375s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+  </body>
+</html>
+

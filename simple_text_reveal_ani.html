@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(204, 23, 23, 0.833);
+      }
+      .title {
+        color: white;
+        text-transform: uppercase;
+        line-height: 40px;
+      }
+      .title-content {
+        display: block;
+        opacity: 0;
+        animation: revealText 0.5s forwards;
+      }
+      .title-second {
+        animation-delay: 0.175s;
+      }
+      .title-third {
+        animation-delay: 0.25s;
+      }
+      .title-fourth {
+        animation-delay: 0.325s;
+      }
+      @keyframes revealText {
+        from {
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">
+      <span class="title-content">Shoot</span>
+      <span class="title-content title-second">your short</span>
+      <span class="title-content title-third">You will always</span>
+      <span class="title-content title-fourth">Miss if you don't.</span>
+    </h1>
+  </body>
+</html>

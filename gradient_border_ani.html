@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .c {
+        color: aliceblue;
+        text-align: center;
+        font-size: x-large;
+      }
+      .card {
+        width: 250px;
+        height: 250px;
+        background-color: black;
+        border: 5px solid;
+        border-image: linear-gradient(orange, red, blue) 1;
+        animation: rotate 2.5s ease-in infinite;
+      }
+      @keyframes rotate {
+        50% {
+          border-image: linear-gradient(360deg, orange, red, blue) 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="card">
+      <figcaption class="c">
+        you spin my head right round, right round... you spin my head right
+        round, right round... you spin my head right round, right round...
+        you spin my head right round, right round...
+        you spin my head right round, right round...
+      </figcaption>
+    </figure>
+  </body>
+</html>

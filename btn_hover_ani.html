@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+        .button{
+            display: inline-block;
+            text-decoration: none;
+            padding: 14px 24px;
+            color: #fff;
+            border: 1px solid #fff;
+            overflow: hidden; position: relative;
+            transition: color .5s .25s;
+        }
+        .button::before,
+        .button::after{
+            content: "";
+            position: absolute;
+            top: 0; width: 50%;height: 100%;
+            background-color: #fff;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: transform .5s;
+            cubic-bezier(.785, .135, .15, .86);
+        }
+        .button::before{
+            left: 0;
+            transform-origin: left;
+        }
+        .button::after{
+            right: 0;
+            transform-origin: right;
+        }
+    .button:hover::before,
+    .button:hover::after{
+        transform: scaleX(1);
+    }
+    .button:hover{
+        color: darksalmon;
+        transition-delay: .5s;
+    }
+  </style>
+  <body>
+    <a href="#" class="button">Learn more</a>
+  </body>
+</html>

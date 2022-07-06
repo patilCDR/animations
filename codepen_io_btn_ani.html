@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .button {
+        display: inline-block;
+        text-decoration: none;
+        color: aliceblue;
+        padding: 3px;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+      }
+      .button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(115deg, green, blue, yellow, red, white);
+        background-size: 50% 100%;
+        border-radius: inherit;
+      }
+      .button:hover::before {
+        animation: animate_border 0.75s linear infinite;
+      }
+      .button span {
+        display: block;
+        background-color: black;
+        padding: 13px 20px;
+        border-radius: 3px;
+        position: relative;
+        z-index: 2;
+      }
+      @keyframes animate_border {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="button">
+      <span>Start Coding</span>
+    </a>
+  </body>
+</html>

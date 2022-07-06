@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(7, 7, 110);
+      }
+      .mouse {
+        width: 25px;
+        height: 50px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        display: flex;
+      }
+      .mouse-wheel {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: auto;
+        animation: move-wheel 1s linear infinite;
+      }
+      @keyframes move-wheel {
+        0% {
+          opacity: 0;
+          transform: translateY(-1rem);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(1rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="mouse">
+      <span class="mouse-wheel"></span>
+    </span>
+  </body>
+</html>

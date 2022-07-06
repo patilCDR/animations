@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .button {
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(255, 102, 0);
+        padding: 20px 50px;
+        border: 3px solid rgb(123, 0, 255);
+        position: relative;
+      }
+      .button::before,
+      .button::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: inherit;
+        transition: all 0.5s;
+      }
+      .button::before {
+        top: -15px;
+        left: -15px;
+        border-width: 3px 0 0 3px;
+      }
+      .button::after {
+        bottom: -15px;
+        right: -15px;
+        border-width: 0 3px 3px 0;
+      }
+      .button:hover::before,
+      .button:hover::after {
+        width: calc(100% + 27px);
+        height: calc(100% + 27px);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="button">Learn more</a>
+  </body>
+</html>
